@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
 require("dotenv").config({ path: path.join(__dirname, ".env") });
-console.log("API KEY:", process.env.OPENROUTER_API_KEY);
+
 const candidatesRouter = require("./routes/candidates");
 const matchRouter = require("./routes/match");
 const aiRouter = require("./routes/ai");
