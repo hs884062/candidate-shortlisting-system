@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL || ""
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "https://candidate-shortlisting-system-k4jm.onrender.com"
 
 async function requestJson(path, { method = "GET", body } = {}) {
   const res = await fetch(`${API_BASE}${path}`, {

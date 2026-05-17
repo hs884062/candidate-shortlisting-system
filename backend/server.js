@@ -10,13 +10,9 @@ const aiRouter = require("./routes/ai");
 
 const app = express();
 
-const corsOrigins = (process.env.CORS_ORIGIN || "http://localhost:5173")
-	.split(",")
-	.map((origin) => origin.trim())
-	.filter(Boolean);
-
-const corsOptions = corsOrigins.includes("*") ? {} : { origin: corsOrigins };
-
+const corsOptions = {
+	origin: "*"
+};
 app.use(cors(corsOptions));
 app.use(express.json());
 
